@@ -1,13 +1,37 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>政活クラウド｜地方議員のための政務活動クラウドシステム</title>
-  <meta name="description" content="月2,200円で名簿・ポスター・活動記録を一元管理。地方議員のためのクラウドシステム。30日間無料トライアル。">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>政活クラウド｜地方議員のためのDX支援ツール【月2,200円〜】</title>
+  <meta name="description" content="秘書もスタッフもいない地方議員のために。名簿管理・ポスター管理・活動記録をスマホ1台で一元管理。月2,200円（税込）、政務活動費対応。30日間無料トライアル実施中。" />
+  <meta name="keywords" content="地方議員,市議会議員,政務活動費,DX,議員ツール,名簿管理,ポスター管理,政治DX" />
+  <meta name="author" content="政活クラウド" />
+  <link rel="canonical" href="https://seikatsukumo.jp/" />
+
+  <!-- OGP -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://seikatsukumo.jp/" />
+  <meta property="og:title" content="政活クラウド｜地方議員のためのDX支援ツール" />
+  <meta property="og:description" content="秘書もスタッフもいない地方議員のために。名簿・ポスター・活動記録をスマホ1台で一元管理。月2,200円、政務活動費対応。" />
+  <meta property="og:image" content="https://seikatsukumo.jp/ogp.png" />
+  <meta property="og:locale" content="ja_JP" />
+  <meta property="og:site_name" content="政活クラウド" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="政活クラウド｜地方議員のためのDX支援ツール" />
+  <meta name="twitter:description" content="秘書もスタッフもいない地方議員のために。名簿・ポスター・活動記録をスマホ1台で一元管理。月2,200円、政務活動費対応。" />
+  <meta name="twitter:image" content="https://seikatsukumo.jp/ogp.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after {
       margin: 0;
@@ -218,6 +242,12 @@
       color: #475569;
       line-height: 1.8;
     }
+    .card-author {
+      font-size: 0.85rem;
+      color: #94a3b8;
+      margin-top: 0.75rem;
+      font-style: italic;
+    }
 
     /* ===== Solution section ===== */
     .solution {
@@ -368,6 +398,35 @@
       content: '✓ ';
       color: #38bdf8;
       font-weight: 700;
+    }
+
+    /* ===== Creator section ===== */
+    .creator {
+      background: #fff;
+    }
+    .creator-content {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .creator-lead {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #1e3a5f;
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+    .creator-body p {
+      font-size: 0.95rem;
+      color: #475569;
+      line-height: 2;
+      margin-bottom: 1.5rem;
+    }
+    .creator-sign {
+      text-align: right;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #1e3a5f;
+      margin-top: 2rem;
     }
 
     /* ===== Contact section ===== */
@@ -576,15 +635,15 @@
       <h2 class="section-title fade-up">あなただけじゃない</h2>
       <div class="cards-3">
         <div class="card fade-up delay-1">
-          <span class="card-icon">🏛️</span>
+          <p class="card-author">— 現職秘書</p>
           <p class="card-text">国会議員には秘書やスタッフが充実しているが、市区町村議員は一人で全てをこなさなければならない。</p>
         </div>
         <div class="card fade-up delay-2">
-          <span class="card-icon">📋</span>
+          <p class="card-author">— 現職市議</p>
           <p class="card-text">名簿管理・ポスター管理・住民対応をExcelと紙で行っており、情報が散らばって非効率だ。</p>
         </div>
         <div class="card fade-up delay-3">
-          <span class="card-icon">⏳</span>
+          <p class="card-author">— 現職市議</p>
           <p class="card-text">本来の仕事である政策研究・住民相談に時間が取れず、事務作業に追われる日々が続いている。</p>
         </div>
       </div>
@@ -603,7 +662,7 @@
         </div>
         <div class="card fade-up delay-2">
           <span class="card-icon">💴</span>
-          <p class="card-label">月2,200円（政務活動費対応）</p>
+          <p class="card-label">月2,200円</p>
         </div>
         <div class="card fade-up delay-3">
           <span class="card-icon">🔒</span>
@@ -620,7 +679,7 @@
       <div class="cards-2">
         <div class="feature-card fade-up delay-1">
           <span class="card-icon">👥</span>
-          <h3>地域住民台帳</h3>
+          <h3>地域住民データ</h3>
           <p>住民情報を一元管理。重複チェックを自動で行い、データの品質を常に保ちます。</p>
         </div>
         <div class="feature-card fade-up delay-2">
@@ -631,12 +690,12 @@
         <div class="feature-card fade-up delay-3">
           <span class="card-icon">🗺️</span>
           <h3>地域活動マップ</h3>
-          <p>ランク別色分け・ルート作成・現在地追跡。効率的な地域回りをサポートします。</p>
+          <p>ランク別色分け・ルート作成・現在地追跡。政務活動をサポートします。</p>
         </div>
         <div class="feature-card fade-up delay-4">
           <span class="card-icon">📝</span>
           <h3>地域活動ログ</h3>
-          <p>政務活動の記録を自動蓄積。政務活動費の根拠資料としてそのまま活用できます。</p>
+          <p>政務活動の記録を自動蓄積。政治DXに貢献します。</p>
         </div>
       </div>
     </div>
@@ -693,6 +752,22 @@
       </ul>
       <div class="fade-up delay-2">
         <a href="/register" class="btn-primary">無料で始める →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Creator -->
+  <section class="section creator">
+    <div class="section-inner">
+      <h2 class="section-title fade-up">制作者の思い</h2>
+      <div class="creator-content fade-up delay-1">
+        <p class="creator-lead">地方議員にこそ、<br>政治DXが必要だと思っている。</p>
+        <div class="creator-body">
+          <p>市区町村議員の多くは、秘書もスタッフもいない。限られた議員報酬と政務活動費の中で、名簿管理からポスターの確認まで、すべてを一人でこなしている。</p>
+          <p>本来、その時間は住民の声を聞くために、政策や制度を研究するために使われるべきだ。Excelを開いて手作業でデータを整理している暇があるなら、もっと大切なことに集中できるはずだった。</p>
+          <p>このサービスは、議員秘書として現場を見てきた経験から生まれた。「あったらいいな」を、安価で、シンプルに。地方議員のための最低限のセットを、地道に作り続けている。</p>
+        </div>
+
       </div>
     </div>
   </section>
@@ -797,6 +872,67 @@
       }
     });
   </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "政活クラウド",
+  "url": "https://seikatsukumo.jp/",
+  "description": "地方議員向けの政務支援クラウドサービス。名簿管理・ポスター管理・活動記録をスマホ1台で一元管理。",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web, iOS, Android",
+  "offers": {
+    "@type": "Offer",
+    "price": "2200",
+    "priceCurrency": "JPY",
+    "priceSpecification": {
+      "@type": "UnitPriceSpecification",
+      "price": "2200",
+      "priceCurrency": "JPY",
+      "unitText": "月額（税込）"
+    }
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "政活クラウド",
+    "email": "seikatshusapo@gmail.com"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "政務活動費で支払えますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい、対応しています。領収書・利用明細の発行が可能です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "無料トライアル期間中にクレジットカードは必要ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不要です。30日間は完全無料でご利用いただけます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "スマートフォンだけで使えますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい、スマホ1台で全機能をご利用いただけます。PCからのアクセスにも対応しています。"
+      }
+    }
+  ]
+}
+</script>
 
 </body>
 </html>
