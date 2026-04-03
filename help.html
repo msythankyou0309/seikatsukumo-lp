@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>使い方ガイド｜政活クラウド</title>
+  <meta name="description" content="政活クラウドの使い方ガイドです。アカウント登録から住民データ管理・ポスター管理・活動ログまで、すべての機能の操作手順を解説します。" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="author" content="政活クラウド" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      color: #1e293b;
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+
+    /* ===== Nav ===== */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(30, 58, 95, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 0 24px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      color: #fff;
+      font-size: 1.25rem;
+      font-weight: 700;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+
+    .nav-cta {
+      display: inline-block;
+      background: #38bdf8;
+      color: #fff;
+      font-size: 0.875rem;
+      font-weight: 700;
+      padding: 8px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .nav-cta:hover {
+      background: #0ea5e9;
+      transform: translateY(-2px);
+    }
+
+    /* ===== Page Header ===== */
+    .page-header {
+      background: #1e3a5f;
+      color: #fff;
+      padding: 120px 24px 48px;
+      text-align: center;
+    }
+
+    .page-header h1 {
+      font-size: 2rem;
+      font-weight: 900;
+      line-height: 1.4;
+    }
+
+    .page-header-sub {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.7);
+      margin-top: 12px;
+    }
+
+    /* ===== TOC ===== */
+    .toc {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 32px 24px 0;
+    }
+
+    .toc-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #1e3a5f;
+      margin-bottom: 12px;
+    }
+
+    .toc ol {
+      font-size: 0.9rem;
+      color: #475569;
+      padding-left: 1.5em;
+      line-height: 2;
+    }
+
+    .toc a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    .toc a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== Content ===== */
+    .content {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    .content h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #1e3a5f;
+      margin-top: 48px;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #38bdf8;
+    }
+
+    .content h2:first-of-type {
+      margin-top: 0;
+    }
+
+    .content h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #334155;
+      margin-top: 32px;
+      margin-bottom: 12px;
+    }
+
+    .content p {
+      font-size: 0.95rem;
+      color: #475569;
+      line-height: 1.9;
+      margin-bottom: 16px;
+    }
+
+    .content ul, .content ol {
+      font-size: 0.95rem;
+      color: #475569;
+      line-height: 1.9;
+      margin-bottom: 16px;
+      padding-left: 1.5em;
+    }
+
+    .content li {
+      margin-bottom: 8px;
+    }
+
+    .content .note {
+      background: #f0f9ff;
+      border-left: 4px solid #38bdf8;
+      padding: 12px 16px;
+      font-size: 0.9rem;
+      color: #1e3a5f;
+      margin-bottom: 16px;
+      border-radius: 0 6px 6px 0;
+    }
+
+    .content .warn {
+      background: #fffbeb;
+      border-left: 4px solid #f59e0b;
+      padding: 12px 16px;
+      font-size: 0.9rem;
+      color: #92400e;
+      margin-bottom: 16px;
+      border-radius: 0 6px 6px 0;
+    }
+
+    .faq-item {
+      margin-bottom: 24px;
+    }
+
+    .faq-q {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #1e3a5f;
+      margin-bottom: 6px;
+    }
+
+    .faq-a {
+      font-size: 0.9rem;
+      color: #475569;
+      line-height: 1.8;
+    }
+
+    .last-updated {
+      font-size: 0.85rem;
+      color: #94a3b8;
+      text-align: right;
+      margin-bottom: 32px;
+    }
+
+    /* ===== Footer ===== */
+    .footer {
+      background: #132a47;
+      color: rgba(255,255,255,0.6);
+      padding: 40px 24px;
+      text-align: center;
+      font-size: 0.85rem;
+    }
+
+    .footer-logo {
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: #38bdf8;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 768px) {
+      .page-header h1 { font-size: 1.5rem; }
+      .content { padding: 36px 20px 60px; }
+      .content h2 { font-size: 1.1rem; margin-top: 36px; }
+      .content h3 { font-size: 1rem; margin-top: 24px; }
+      .nav-cta { padding: 8px 16px; font-size: 0.8rem; }
+    }
+
+    @media (max-width: 480px) {
+      .page-header { padding: 100px 16px 36px; }
+      .page-header h1 { font-size: 1.3rem; }
+      .content { padding: 28px 16px 48px; }
+      .content h2 { font-size: 1.05rem; }
+      .content h3 { font-size: 0.95rem; }
+      .content p, .content ul, .content ol { font-size: 0.9rem; }
+      .footer-links { gap: 16px; font-size: 0.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav class="nav">
+    <a href="/" class="nav-logo">政活クラウド</a>
+    <a href="https://seikatu-cloud.vercel.app/register" class="nav-cta">無料で試す</a>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <h1>政活クラウドの使い方</h1>
+    <p class="page-header-sub">すべての操作を、このページだけで確認できます</p>
+  </header>
+
+  <!-- TOC -->
+  <nav class="toc">
+    <p class="toc-title">目次</p>
+    <ol>
+      <li><a href="#getting-started">はじめに（最初にやること）</a></li>
+      <li><a href="#residents">地域住民データ</a></li>
+      <li><a href="#posters">ポスター管理</a></li>
+      <li><a href="#map">地域活動マップ</a></li>
+      <li><a href="#activity-log">地域活動ログ</a></li>
+      <li><a href="#settings">設定</a></li>
+      <li><a href="#faq">よくある質問（FAQ）</a></li>
+      <li><a href="#pricing">料金・プラン</a></li>
+    </ol>
+  </nav>
+
+  <!-- Content -->
+  <main class="content">
+    <p class="last-updated">最終更新日：2026年4月3日</p>
+
+    <!-- ========== 1. はじめに ========== -->
+    <h2 id="getting-started">1. はじめに（最初にやること）</h2>
+
+    <h3>1-1. アカウント登録</h3>
+    <ol>
+      <li>トップページの「30日間無料で試す」ボタンをクリックします。</li>
+      <li>メールアドレスとパスワードを入力し、「登録」ボタンを押します。</li>
+      <li>入力したメールアドレスに確認メールが届きます。メール内のリンクをクリックすると登録完了です。</li>
+    </ol>
+    <p class="note">30日間の無料トライアル期間中はクレジットカードの登録は不要です。すべての機能をお試しいただけます。</p>
+
+    <h3>1-2. 初期設定</h3>
+    <p>登録後、まず以下の3つを設定しておくとスムーズに使い始められます。</p>
+
+    <p><strong>事務所名の設定</strong></p>
+    <ol>
+      <li>画面左側のメニューから「設定」を開きます。</li>
+      <li>「事務所名」の欄にご自身の事務所名（例：「○○市議会議員事務所」）を入力します。</li>
+      <li>「保存」ボタンを押して完了です。</li>
+    </ol>
+
+    <p><strong>タグの作成</strong></p>
+    <ol>
+      <li>「設定」画面の「タグ管理」セクションを開きます。</li>
+      <li>デフォルトで「戸別訪問」「地域会合」「相談対応」「街頭活動」の4つのタグが登録されています。</li>
+      <li>必要に応じて、新しいタグの追加や既存タグの編集・削除ができます。</li>
+    </ol>
+
+    <p><strong>ポスター種別の作成</strong></p>
+    <ol>
+      <li>「ポスター管理」画面を開きます。</li>
+      <li>「種別設定」からポスターの種別（例：「市政報告ポスター」「後援会ポスター」）を作成します。</li>
+      <li>各種別にはマップ上で識別しやすいよう任意の色を設定できます。</li>
+    </ol>
+
+    <h3>1-3. スタッフの招待</h3>
+    <ol>
+      <li>「設定」画面の「スタッフ招待」セクションを開きます。</li>
+      <li>招待したい方のメールアドレスを入力し、「招待する」ボタンを押します。</li>
+      <li>招待された方にメールが届き、そこからアカウントを作成すると、同じ事務所のデータを共有できます。</li>
+    </ol>
+    <p class="note">招待されたスタッフも同じデータにアクセスできます。複数人での同時利用が可能です。</p>
+
+    <!-- ========== 2. 地域住民データ ========== -->
+    <h2 id="residents">2. 地域住民データ</h2>
+
+    <h3>2-1. 住民の登録方法</h3>
+
+    <p><strong>手入力で登録する</strong></p>
+    <ol>
+      <li>「地域住民データ」画面を開きます。</li>
+      <li>「新規登録」ボタンをクリックします。</li>
+      <li>登録フォームが表示されます。画面上部で「個人」または「組織」を切り替えられます。</li>
+      <li>氏名・住所・電話番号などの情報を入力します。</li>
+      <li>「保存」ボタンを押して完了です。</li>
+    </ol>
+    <p class="note">郵便番号を入力すると、住所が自動で補完されます。都道府県・市区町村・町名まで自動入力されるので、番地以降を追記してください。</p>
+
+    <p><strong>CSVインポートで一括登録する</strong></p>
+    <ol>
+      <li>「地域住民データ」画面で「CSVインポート」ボタンをクリックします。</li>
+      <li>画面の指示に従い、CSVファイルを選択してアップロードします。</li>
+      <li>列の対応を確認し、「インポート」を実行します。</li>
+    </ol>
+
+    <h3>2-2. 住民の編集方法</h3>
+
+    <p><strong>個別編集</strong></p>
+    <ol>
+      <li>住民一覧から、編集したい住民の氏名をクリックします。</li>
+      <li>編集モーダルが表示されます。</li>
+      <li>情報を変更し、「保存」を押して完了です。</li>
+    </ol>
+
+    <p><strong>一括編集</strong></p>
+    <ol>
+      <li>住民一覧の左側にあるチェックボックスで、編集したい住民を複数選択します。</li>
+      <li>画面上部に表示される「一括編集」ボタンをクリックします。</li>
+      <li>ランク・タグなどをまとめて変更できます。</li>
+    </ol>
+
+    <h3>2-3. 各項目の使い方</h3>
+
+    <p><strong>ランク（S / A / B / C / D）</strong></p>
+    <p>住民との関係性や支援度を5段階で管理できます。ランクはマップ上のピンの色にも反映されます（詳細は「4-1. ピンの色の見方」を参照）。</p>
+
+    <p><strong>タグ</strong></p>
+    <p>住民の属性や関わり方を分類するためのラベルです。編集画面のドロップダウンから選択して付与します。1人の住民に複数のタグを付けることができます。</p>
+
+    <p><strong>訪問ステータス</strong></p>
+    <p>戸別訪問の進捗を管理するためのステータスです。訪問済み・未訪問などの状態を記録できます。</p>
+
+    <p><strong>相談・活動記録の追加</strong></p>
+    <ol>
+      <li>住民の氏名をクリックして編集モーダルを開きます。</li>
+      <li>「活動記録」タブを選択します。</li>
+      <li>日付・種別・内容を入力し、「追加」を押します。</li>
+    </ol>
+    <p>ここで追加した記録は「地域活動ログ」にも自動的に反映されます。</p>
+
+    <h3>2-4. 家族・紹介者の紐づけ</h3>
+    <ol>
+      <li>住民の編集モーダルを開きます。</li>
+      <li>「家族」または「紹介者」の欄で、既に登録済みの住民を検索・選択して紐づけます。</li>
+    </ol>
+    <p>紐づけを行うと、家族構成や人脈の関係性を住民データ上で確認できるようになります。</p>
+
+    <h3>2-5. 重複チェックの仕組み</h3>
+    <p>住民を新規登録またはCSVインポートする際、同一の氏名や住所を持つ既存データがある場合、システムが自動で重複の可能性を通知します。重複と判断された場合は、登録をスキップするか、既存データに上書きするかを選択できます。</p>
+
+    <h3>2-6. CSVエクスポート方法</h3>
+    <ol>
+      <li>「地域住民データ」画面で「CSVエクスポート」ボタンをクリックします。</li>
+      <li>CSVファイルが自動的にダウンロードされます。</li>
+    </ol>
+    <p>エクスポートされるデータには、氏名・住所・ランク・タグなど、登録されているすべての項目が含まれます。</p>
+
+    <!-- ========== 3. ポスター管理 ========== -->
+    <h2 id="posters">3. ポスター管理</h2>
+
+    <h3>3-1. ポスター種別の設定</h3>
+    <ol>
+      <li>「ポスター管理」画面を開きます。</li>
+      <li>「種別設定」をクリックします。</li>
+      <li>種別名（例：「市政報告ポスター」）を入力し、識別用の色を選択します。</li>
+      <li>「保存」を押して完了です。</li>
+    </ol>
+    <p>設定した色は、地域活動マップ上でポスターの種別を視覚的に区別するために使用されます。</p>
+
+    <h3>3-2. ポスターの登録方法（マップから）</h3>
+    <ol>
+      <li>「ポスター管理」画面でマップを表示します。</li>
+      <li>ポスターを掲示した場所をマップ上でクリックします。</li>
+      <li>登録フォームが表示されるので、種別・設置先名・状態などを入力します。</li>
+      <li>「保存」を押して完了です。</li>
+    </ol>
+
+    <h3>3-3. CSVインポートで一括登録</h3>
+    <ol>
+      <li>「ポスター管理」画面で「CSVインポート」ボタンをクリックします。</li>
+      <li>CSVファイルを選択してアップロードします。</li>
+      <li>列の対応を確認し、「インポート」を実行します。</li>
+    </ol>
+
+    <h3>3-4. 編集・削除方法</h3>
+
+    <p><strong>個別編集</strong></p>
+    <ol>
+      <li>ポスター一覧から、編集したいポスターの種別名をクリックします。</li>
+      <li>編集フォームが表示されるので、内容を変更して「保存」を押します。</li>
+    </ol>
+
+    <p><strong>一括操作</strong></p>
+    <ol>
+      <li>一覧の左側にあるチェックボックスで、対象のポスターを複数選択します。</li>
+      <li>画面上部に表示される「一括編集」または「削除」ボタンで操作します。</li>
+    </ol>
+
+    <h3>3-5. 状態管理</h3>
+    <p>各ポスターには以下の3つの状態を設定できます。</p>
+    <ul>
+      <li><strong>掲示中</strong> ― 現在掲示されているポスター</li>
+      <li><strong>要確認</strong> ― 破損や期限切れなど、現地確認が必要なポスター</li>
+      <li><strong>撤去済</strong> ― 撤去が完了したポスター</li>
+    </ul>
+    <p>状態はマップ上のピンの色にも反映されます（詳細は「4-1. ピンの色の見方」を参照）。</p>
+
+    <!-- ========== 4. 地域活動マップ ========== -->
+    <h2 id="map">4. 地域活動マップ</h2>
+
+    <h3>4-1. ピンの色の見方</h3>
+
+    <p><strong>住民データのピン（ランク別）</strong></p>
+    <ul>
+      <li><strong>金色</strong> ― ランクS</li>
+      <li><strong>赤</strong> ― ランクA</li>
+      <li><strong>青</strong> ― ランクB</li>
+      <li><strong>緑</strong> ― ランクC</li>
+      <li><strong>グレー</strong> ― ランクD</li>
+      <li><strong>水色</strong> ― ランク未設定</li>
+    </ul>
+
+    <p><strong>ポスターのピン（状態別）</strong></p>
+    <ul>
+      <li><strong>オレンジ</strong> ― 掲示中</li>
+      <li><strong>黄色</strong> ― 要確認</li>
+      <li><strong>グレー</strong> ― 撤去済</li>
+    </ul>
+
+    <h3>4-2. 凡例の表示・折りたたみ</h3>
+    <p>マップ右下に凡例パネルがあります。ピンの色の意味を確認できます。パネルのヘッダー部分をクリックすると折りたたみ・展開ができます。</p>
+
+    <h3>4-3. ルート作成の手順</h3>
+    <ol>
+      <li>マップ画面で「ルート作成」ボタンをクリックします。</li>
+      <li>訪問したい住民やポスターのピンを順番にクリックして経由地を追加します。</li>
+      <li>すべての経由地を追加したら、「ルート表示」を押すとマップ上に最適な訪問ルートが表示されます。</li>
+    </ol>
+    <p>ルートは戸別訪問やポスター巡回の際に活用できます。</p>
+
+    <h3>4-4. 現在地追跡の使い方</h3>
+    <ol>
+      <li>マップ画面で「現在地」ボタンをクリックします。</li>
+      <li>ブラウザの位置情報の許可を求められた場合は「許可」を選択します。</li>
+      <li>マップ上に現在地が青い点で表示され、移動に合わせて自動で追跡します。</li>
+    </ol>
+    <p class="note">現在地追跡を利用するには、ブラウザの位置情報サービスが有効になっている必要があります。</p>
+
+    <h3>4-5. 全画面表示の使い方</h3>
+    <ol>
+      <li>マップ画面右上の「全画面」ボタンをクリックします。</li>
+      <li>マップが画面全体に拡大表示されます。</li>
+      <li>元に戻すには、再度「全画面」ボタンをクリックするか、Escキーを押します。</li>
+    </ol>
+
+    <!-- ========== 5. 地域活動ログ ========== -->
+    <h2 id="activity-log">5. 地域活動ログ</h2>
+
+    <h3>5-1. 活動ログとは</h3>
+    <p>地域活動ログは、日々の活動内容を時系列で記録・閲覧できる機能です。戸別訪問・地域会合・相談対応・街頭活動などの活動を記録することで、政務活動費の支出根拠となる資料を蓄積できます。</p>
+
+    <h3>5-2. 手動での活動記録の追加方法</h3>
+    <ol>
+      <li>「地域活動ログ」画面を開きます。</li>
+      <li>「新規追加」ボタンをクリックします。</li>
+      <li>日付・活動種別・内容を入力します。</li>
+      <li>「保存」を押して完了です。</li>
+    </ol>
+
+    <h3>5-3. 住民データの相談・活動記録との連動</h3>
+    <p>住民データの編集モーダルから追加した相談・活動記録は、地域活動ログにも自動的に反映されます。逆に、活動ログから住民を紐づけて記録を追加することもできます。どちらから入力しても、データは一元管理されます。</p>
+
+    <h3>5-4. 活動種別の使い方</h3>
+    <p>活動記録には以下の種別を設定できます。</p>
+    <ul>
+      <li><strong>戸別訪問</strong> ― 住民宅への個別訪問</li>
+      <li><strong>地域会合</strong> ― 町内会・自治会・各種団体の会合への参加</li>
+      <li><strong>相談対応</strong> ― 住民からの相談・要望への対応</li>
+      <li><strong>街頭活動</strong> ― 駅前・交差点などでの街頭演説や挨拶活動</li>
+    </ul>
+    <p>種別は「設定」画面の「タグ管理」から追加・編集できます。</p>
+
+    <!-- ========== 6. 設定 ========== -->
+    <h2 id="settings">6. 設定</h2>
+
+    <h3>6-1. 事務所名の変更</h3>
+    <ol>
+      <li>画面左側のメニューから「設定」を開きます。</li>
+      <li>「事務所名」の欄を編集します。</li>
+      <li>「保存」を押して完了です。</li>
+    </ol>
+
+    <h3>6-2. タグ管理</h3>
+    <ol>
+      <li>「設定」画面の「タグ管理」セクションを開きます。</li>
+      <li>タグの追加：「新しいタグ」欄にタグ名を入力し「追加」を押します。</li>
+      <li>タグの編集：既存タグの名称をクリックして変更できます。</li>
+      <li>タグの削除：タグの右側にある「削除」ボタンを押します。</li>
+    </ol>
+    <p class="warn">タグを削除すると、そのタグが付与されていた住民データからも自動的に外れます。削除前にご確認ください。</p>
+
+    <h3>6-3. パスワード変更</h3>
+    <ol>
+      <li>「設定」画面の「パスワード変更」セクションを開きます。</li>
+      <li>現在のパスワードと新しいパスワードを入力します。</li>
+      <li>「変更する」ボタンを押して完了です。</li>
+    </ol>
+
+    <h3>6-4. メールアドレス変更</h3>
+    <ol>
+      <li>「設定」画面の「メールアドレス変更」セクションを開きます。</li>
+      <li>新しいメールアドレスを入力します。</li>
+      <li>「変更する」ボタンを押すと、新しいメールアドレスに確認メールが送信されます。</li>
+      <li>確認メール内のリンクをクリックすると変更が完了します。</li>
+    </ol>
+
+    <!-- ========== 7. FAQ ========== -->
+    <h2 id="faq">7. よくある質問（FAQ）</h2>
+
+    <div class="faq-item">
+      <p class="faq-q">Q. ログインできません</p>
+      <p class="faq-a">メールアドレスとパスワードが正しいか確認してください。パスワードは大文字・小文字を区別します。それでもログインできない場合は、下記「パスワードを忘れた」の手順をお試しください。</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-q">Q. パスワードを忘れました</p>
+      <p class="faq-a">ログイン画面の「パスワードを忘れた方はこちら」をクリックし、登録済みのメールアドレスを入力してください。パスワード再設定用のメールが届きます。メール内のリンクから新しいパスワードを設定してください。</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-q">Q. 登録したメールアドレスを忘れました</p>
+      <p class="faq-a">メールアドレスの照会はセキュリティ上対応しておりません。お手数ですが、別のメールアドレスで新規登録してください。</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-q">Q. スタッフが招待メールを受け取れません</p>
+      <p class="faq-a">迷惑メールフォルダに振り分けられている可能性があります。確認しても届いていない場合は、招待メールアドレスに誤りがないか確認のうえ、再送してください。携帯キャリアのメールアドレスをお使いの場合、受信設定でドメインの許可が必要なことがあります。</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-q">Q. マップにピンが表示されません</p>
+      <p class="faq-a">住民データまたはポスターデータに住所が正しく登録されているか確認してください。住所が未入力、または存在しない住所が入力されている場合、マップ上にピンは表示されません。</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-q">Q. CSVインポートが失敗します</p>
+      <p class="faq-a">以下の点を確認してください。(1) ファイル形式がCSV（.csv）であること、(2) 文字コードがUTF-8であること、(3) 必須項目（氏名など）が空欄になっていないこと。Excelで編集した場合は、保存時に「CSV UTF-8」形式を選択してください。</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-q">Q. 複数人で同時に使えますか？</p>
+      <p class="faq-a">はい、使えます。スタッフを招待すると、同じ事務所のデータに複数人で同時にアクセスできます。リアルタイムで情報が共有されるため、外出先と事務所での同時作業も可能です。</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-q">Q. スマホでも使えますか？</p>
+      <p class="faq-a">はい、スマホのブラウザからそのままご利用いただけます。PWA（Progressive Web App）に対応しているため、ホーム画面に追加するとアプリのように素早く起動できます。<br />
+      【iPhoneの場合】Safariで政活クラウドを開く → 画面下部の共有ボタン → 「ホーム画面に追加」<br />
+      【Androidの場合】Chromeで政活クラウドを開く → 画面上部の「ホーム画面に追加」バナー、またはメニュー → 「ホーム画面に追加」</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-q">Q. データは安全ですか？</p>
+      <p class="faq-a">すべての通信はSSL/TLSで暗号化されています。データは国内のクラウドサーバーに保存され、定期的にバックアップを実施しています。詳しくは<a href="/privacy.html">プライバシーポリシー</a>をご確認ください。</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-q">Q. 解約後のデータはどうなりますか？</p>
+      <p class="faq-a">解約後30日間はデータが保持されます。その間に再契約いただければ、データを引き継いでご利用いただけます。30日を過ぎるとデータは自動的に削除され、復元できません。解約前にCSVエクスポートでデータをダウンロードしておくことをおすすめします。</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-q">Q. 解約方法を教えてください</p>
+      <p class="faq-a">「設定」画面の最下部にある「解約する」ボタンから手続きできます。解約は即時反映され、現在の請求期間の末日までサービスをご利用いただけます。詳しくは下記「8-4. 解約方法」をご確認ください。</p>
+    </div>
+
+    <!-- ========== 8. 料金・プラン ========== -->
+    <h2 id="pricing">8. 料金・プラン</h2>
+
+    <h3>8-1. 無料トライアル（30日間）</h3>
+    <p>アカウント登録後、30日間はすべての機能を無料でご利用いただけます。トライアル期間中にクレジットカードの登録は不要です。トライアル期間が終了すると、有料プランへの移行手続きを行うまでサービスの利用が一時停止されます。</p>
+
+    <h3>8-2. 月額料金</h3>
+    <p>月額2,200円（税込）で、すべての機能をご利用いただけます。スタッフの招待人数に制限はありません。政務活動費での支払いにも対応しています。</p>
+
+    <h3>8-3. クーポンコードの使い方</h3>
+    <ol>
+      <li>有料プランへの移行画面、または「設定」画面の「プラン・お支払い」セクションを開きます。</li>
+      <li>「クーポンコード」欄にコードを入力します。</li>
+      <li>「適用」ボタンを押すと、割引が反映されます。</li>
+    </ol>
+
+    <h3>8-4. 解約方法</h3>
+    <ol>
+      <li>画面左側のメニューから「設定」を開きます。</li>
+      <li>画面最下部の「解約する」ボタンをクリックします。</li>
+      <li>確認画面で「解約を確定する」を押すと解約が完了します。</li>
+    </ol>
+    <p>解約後も、現在の請求期間の末日まではサービスをご利用いただけます。解約後30日間はデータが保持されますが、それ以降は自動的に削除されます。</p>
+    <p class="warn">解約前に、必要なデータはCSVエクスポートでバックアップしてください。削除後のデータ復元はできません。</p>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-logo">政活クラウド</div>
+    <ul class="footer-links">
+      <li><a href="/terms.html">利用規約</a></li>
+      <li><a href="/privacy.html">プライバシーポリシー</a></li>
+      <li><a href="/tokusho.html">特定商取引法に基づく表記</a></li>
+      <li><a href="/">トップページ</a></li>
+    </ul>
+    <p>&copy; 2026 政活クラウド</p>
+  </footer>
+
+</body>
+</html>
