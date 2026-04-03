@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>プライバシーポリシー｜政活クラウド</title>
+  <meta name="description" content="政活クラウドのプライバシーポリシーページです。個人情報の取り扱いについてご確認ください。" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="author" content="政活クラウド" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      color: #1e293b;
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+
+    /* ===== Nav ===== */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(30, 58, 95, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 0 24px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      color: #fff;
+      font-size: 1.25rem;
+      font-weight: 700;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+
+    .nav-cta {
+      display: inline-block;
+      background: #38bdf8;
+      color: #fff;
+      font-size: 0.875rem;
+      font-weight: 700;
+      padding: 8px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .nav-cta:hover {
+      background: #0ea5e9;
+      transform: translateY(-2px);
+    }
+
+    /* ===== Page Header ===== */
+    .page-header {
+      background: #1e3a5f;
+      color: #fff;
+      padding: 120px 24px 48px;
+      text-align: center;
+    }
+
+    .page-header h1 {
+      font-size: 2rem;
+      font-weight: 900;
+      line-height: 1.4;
+    }
+
+    /* ===== Content ===== */
+    .content {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    .content h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #1e3a5f;
+      margin-top: 48px;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #38bdf8;
+    }
+
+    .content h2:first-of-type {
+      margin-top: 0;
+    }
+
+    .content p {
+      font-size: 0.95rem;
+      color: #475569;
+      line-height: 1.9;
+      margin-bottom: 16px;
+    }
+
+    .content ul, .content ol {
+      font-size: 0.95rem;
+      color: #475569;
+      line-height: 1.9;
+      margin-bottom: 16px;
+      padding-left: 1.5em;
+    }
+
+    .content li {
+      margin-bottom: 8px;
+    }
+
+    .last-updated {
+      font-size: 0.85rem;
+      color: #94a3b8;
+      text-align: right;
+      margin-bottom: 32px;
+    }
+
+    /* ===== Footer ===== */
+    .footer {
+      background: #132a47;
+      color: rgba(255,255,255,0.6);
+      padding: 40px 24px;
+      text-align: center;
+      font-size: 0.85rem;
+    }
+
+    .footer-logo {
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: #38bdf8;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 768px) {
+      .page-header h1 { font-size: 1.5rem; }
+      .content { padding: 36px 20px 60px; }
+      .content h2 { font-size: 1.1rem; margin-top: 36px; }
+      .nav-cta { padding: 8px 16px; font-size: 0.8rem; }
+    }
+
+    @media (max-width: 480px) {
+      .page-header { padding: 100px 16px 36px; }
+      .page-header h1 { font-size: 1.3rem; }
+      .content { padding: 28px 16px 48px; }
+      .content h2 { font-size: 1.05rem; }
+      .content p, .content ul, .content ol { font-size: 0.9rem; }
+      .footer-links { gap: 16px; font-size: 0.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav class="nav">
+    <a href="/" class="nav-logo">政活クラウド</a>
+    <a href="https://seikatu-cloud.vercel.app/register" class="nav-cta">無料で試す</a>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <h1>プライバシーポリシー</h1>
+  </header>
+
+  <!-- Content -->
+  <main class="content">
+    <p class="last-updated">最終更新日：2026年4月1日</p>
+
+    <p>政活クラウド（以下「当社」）は、当社が提供するクラウドサービス「政活クラウド」（以下「本サービス」）における利用者の個人情報の取り扱いについて、以下のとおりプライバシーポリシー（以下「本ポリシー」）を定めます。</p>
+
+    <h2>第1条（収集する情報）</h2>
+    <p>当社は、本サービスの提供にあたり、以下の情報を収集することがあります。</p>
+    <ol>
+      <li><strong>利用者が提供する情報</strong>
+        <ul>
+          <li>氏名、メールアドレス、電話番号等の連絡先情報</li>
+          <li>所属する議会名、役職等の業務関連情報</li>
+          <li>クレジットカード情報等の決済に必要な情報（決済代行サービスを通じて処理されます）</li>
+          <li>本サービス上で利用者が登録・入力するデータ（名簿情報、活動記録、ポスター管理情報等）</li>
+        </ul>
+      </li>
+      <li><strong>自動的に収集される情報</strong>
+        <ul>
+          <li>IPアドレス、ブラウザの種類・バージョン、OS情報</li>
+          <li>アクセス日時、閲覧ページ、リファラー情報</li>
+          <li>端末情報（デバイスの種類、画面解像度等）</li>
+          <li>Cookieおよび類似の技術により収集される情報</li>
+        </ul>
+      </li>
+    </ol>
+
+    <h2>第2条（利用目的）</h2>
+    <p>当社は、収集した個人情報を以下の目的で利用します。</p>
+    <ol>
+      <li>本サービスの提供、運営、維持および改善</li>
+      <li>利用者のアカウント管理および本人確認</li>
+      <li>利用料金の請求および決済処理</li>
+      <li>利用者からのお問い合わせへの対応</li>
+      <li>本サービスに関する重要なお知らせ（メンテナンス、規約変更等）の通知</li>
+      <li>新機能やアップデートに関する情報提供（利用者が希望する場合）</li>
+      <li>利用状況の分析によるサービスの改善および新サービスの開発</li>
+      <li>不正アクセス、不正利用の検知および防止</li>
+      <li>法令に基づく対応</li>
+    </ol>
+
+    <h2>第3条（第三者への提供）</h2>
+    <p>当社は、以下の場合を除き、利用者の個人情報を第三者に提供することはありません。</p>
+    <ol>
+      <li>利用者の同意がある場合</li>
+      <li>法令に基づく場合（裁判所、検察庁、警察等の公的機関からの法令に基づく要請を受けた場合）</li>
+      <li>人の生命、身体または財産の保護のために必要がある場合であって、本人の同意を得ることが困難であるとき</li>
+      <li>本サービスの提供に必要な範囲で業務委託先（サーバー運営会社、決済代行会社、メール配信サービス等）に提供する場合。この場合、当社は委託先に対して個人情報の適切な管理を義務付けます。</li>
+      <li>合併、会社分割、事業譲渡その他の事由により事業が承継される場合</li>
+    </ol>
+
+    <h2>第4条（安全管理措置）</h2>
+    <p>当社は、個人情報の漏えい、滅失、毀損の防止その他個人情報の安全管理のために、以下の措置を講じます。</p>
+    <ul>
+      <li>通信の暗号化（SSL/TLS）の実施</li>
+      <li>データベースへのアクセス制御および認証の実施</li>
+      <li>個人情報を取り扱う従業者に対する教育・研修の実施</li>
+      <li>個人情報の取り扱いに関する規程の整備および運用</li>
+      <li>定期的なセキュリティ対策の見直しおよび改善</li>
+    </ul>
+
+    <h2>第5条（Cookieの使用について）</h2>
+    <ol>
+      <li>当社は、本サービスおよび当社ウェブサイトにおいてCookie（クッキー）および類似の技術を使用しています。</li>
+      <li>Cookieは、以下の目的で使用されます。
+        <ul>
+          <li>利用者の認証状態の維持（ログインセッションの管理）</li>
+          <li>利用者の設定情報の保存</li>
+          <li>アクセス解析によるサービスの改善（Google Analytics等を使用する場合があります）</li>
+        </ul>
+      </li>
+      <li>利用者は、ブラウザの設定によりCookieの受け入れを拒否することができます。ただし、Cookieを無効にした場合、本サービスの一部の機能が正常に動作しないことがあります。</li>
+    </ol>
+
+    <h2>第6条（アクセス解析ツールの使用）</h2>
+    <p>当社は、本サービスの利用状況を把握するために、Google LLC が提供するGoogle Analyticsを使用する場合があります。Google Analyticsは、Cookieを使用して利用者の情報を収集しますが、個人を特定する情報は含まれません。収集されたデータはGoogleのプライバシーポリシーに基づいて管理されます。詳細はGoogleのプライバシーポリシーをご確認ください。</p>
+
+    <h2>第7条（個人情報の開示・訂正・削除）</h2>
+    <ol>
+      <li>利用者は、当社に対して、自己の個人情報の開示を請求することができます。</li>
+      <li>利用者は、自己の個人情報に誤りがある場合、当社に対して訂正または削除を請求することができます。</li>
+      <li>利用者は、自己の個人情報の利用停止または消去を請求することができます。</li>
+      <li>上記の請求を行う場合は、下記のお問い合わせ先までご連絡ください。当社は、本人確認を行ったうえで、合理的な期間内に対応いたします。</li>
+      <li>なお、法令の規定により当社が保存義務を負う情報については、削除に応じかねる場合があります。</li>
+    </ol>
+
+    <h2>第8条（個人情報の保存期間）</h2>
+    <ol>
+      <li>当社は、利用目的の達成に必要な期間、個人情報を保存します。</li>
+      <li>利用者が退会した場合、当社は退会後90日以内に個人情報を削除します。ただし、以下の場合はこの限りではありません。
+        <ul>
+          <li>法令により一定期間の保存が義務付けられている場合</li>
+          <li>当社の正当な事業上の利益のために必要な場合（不正利用の防止等）</li>
+        </ul>
+      </li>
+    </ol>
+
+    <h2>第9条（未成年者の利用について）</h2>
+    <p>本サービスは、18歳以上の方を対象としています。18歳未満の方が本サービスを利用される場合は、保護者の同意が必要です。</p>
+
+    <h2>第10条（プライバシーポリシーの変更）</h2>
+    <ol>
+      <li>当社は、法令の変更、サービス内容の変更その他の理由により、本ポリシーを変更することがあります。</li>
+      <li>重要な変更を行う場合は、本サービス上での掲示またはメールによる通知等、適切な方法で利用者にお知らせいたします。</li>
+      <li>変更後のプライバシーポリシーは、当社ウェブサイトに掲載した時点から効力を生じるものとします。</li>
+    </ol>
+
+    <h2>お問い合わせ先</h2>
+    <p>個人情報の取り扱いに関するお問い合わせ、開示・訂正・削除のご請求は、以下の連絡先までお願いいたします。</p>
+    <p>
+      サービス名：政活クラウド<br />
+      メールアドレス：seikatshusapo@gmail.com
+    </p>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-logo">政活クラウド</div>
+    <ul class="footer-links">
+      <li><a href="/terms">利用規約</a></li>
+      <li><a href="/privacy">プライバシーポリシー</a></li>
+      <li><a href="/">トップページ</a></li>
+    </ul>
+    <p>&copy; 2026 政活クラウド</p>
+  </footer>
+
+</body>
+</html>
