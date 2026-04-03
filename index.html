@@ -537,91 +537,6 @@
     .cta-final { background: #1e3a5f; color: #fff; }
     .cta-final .section-title { color: #fff; }
 
-    .contact-form {
-      max-width: 560px;
-      margin: 0 auto;
-    }
-
-    .form-group {
-      margin-bottom: 20px;
-    }
-
-    .form-group label {
-      display: block;
-      font-size: 0.9rem;
-      font-weight: 500;
-      margin-bottom: 6px;
-      color: #1e3a5f;
-    }
-
-    .form-group label .req {
-      color: #ef4444;
-      font-size: 0.8rem;
-      margin-left: 4px;
-    }
-
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      width: 100%;
-      padding: 12px 16px;
-      border: 1px solid #cbd5e1;
-      border-radius: 8px;
-      font-size: 1rem;
-      font-family: 'Noto Sans JP', sans-serif;
-      background: #fff;
-      transition: border-color 0.3s;
-    }
-
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      outline: none;
-      border-color: #38bdf8;
-      box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
-    }
-
-    .form-group textarea {
-      min-height: 140px;
-      resize: vertical;
-    }
-
-    .btn-submit {
-      display: inline-block;
-      background: #1e3a5f;
-      color: #fff;
-      font-size: 1rem;
-      font-weight: 700;
-      padding: 14px 48px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-family: 'Noto Sans JP', sans-serif;
-      transition: background 0.3s, transform 0.3s;
-      width: 100%;
-    }
-
-    .btn-submit:hover {
-      background: #15294a;
-      transform: translateY(-2px);
-    }
-
-    .form-success {
-      display: none;
-      background: #ecfdf5;
-      border: 1px solid #6ee7b7;
-      color: #065f46;
-      padding: 16px;
-      border-radius: 8px;
-      text-align: center;
-      font-size: 0.95rem;
-      margin-top: 16px;
-    }
-
-    .form-success.show {
-      display: block;
-    }
-
     /* ===== Footer ===== */
     .footer {
       background: #132a47;
@@ -694,18 +609,49 @@
     @media (max-width: 768px) {
       .hero h1 { font-size: 1.75rem; }
       .hero p.sub { font-size: 1rem; }
-      .section-title { font-size: 1.4rem; }
-      .cards-3 { grid-template-columns: 1fr; }
-      .cards-2 { grid-template-columns: 1fr; }
+      .section { padding: 60px 20px; }
+      .section-title { font-size: 1.35rem; margin-bottom: 32px; }
+      .cards-3 { grid-template-columns: 1fr; gap: 16px; }
+      .cards-2 { grid-template-columns: 1fr; gap: 16px; }
+      .card { padding: 24px 20px; }
+      .feature-card { padding: 24px 20px; }
+      .number-banner .num { font-size: 2.2rem; }
+      .number-banner { padding: 2rem 1rem; }
+      .testimonial-cards { grid-template-columns: 1fr; gap: 1rem; }
+      .testimonial-card { padding: 1.5rem; }
+      .testimonial-card blockquote { font-size: 0.9rem; }
+      .pricing-table { font-size: 0.88rem; }
+      .pricing-table th, .pricing-table td { padding: 12px 14px; }
+      .trial-checks { font-size: 0.95rem; }
+      .creator-lead { font-size: 1.15rem; }
+      .creator-body p { font-size: 0.9rem; }
+      .faq-q { font-size: 0.95rem; }
+      .faq-a { font-size: 0.88rem; }
+      .solution-desc { font-size: 0.93rem; margin: -24px auto 32px; }
+      .btn-primary { display: block; width: 100%; text-align: center; padding: 16px 24px; font-size: 1.05rem; }
+      .nav-cta { padding: 8px 16px; font-size: 0.8rem; }
     }
 
     @media (max-width: 480px) {
-      .hero { padding: 120px 16px 60px; }
-      .section { padding: 60px 16px; }
-      .hero h1 { font-size: 1.5rem; }
-      .btn-primary { padding: 14px 32px; font-size: 1rem; }
-      .pricing-table { font-size: 0.85rem; }
-      .pricing-table th, .pricing-table td { padding: 12px 10px; }
+      .hero { padding: 110px 16px 50px; }
+      .hero h1 { font-size: 1.4rem; }
+      .hero p.sub { font-size: 0.93rem; }
+      .section { padding: 48px 16px; }
+      .section-title { font-size: 1.2rem; margin-bottom: 24px; }
+      .number-banner .num { font-size: 1.8rem; }
+      .number-banner .num-sub { font-size: 0.85rem; }
+      .number-banner { padding: 1.5rem 1rem; }
+      .btn-primary { padding: 14px 20px; font-size: 1rem; }
+      .pricing-table { font-size: 0.8rem; }
+      .pricing-table th, .pricing-table td { padding: 10px 8px; }
+      .card-text { font-size: 0.88rem; }
+      .card-author { font-size: 0.8rem; }
+      .feature-card h3 { font-size: 1rem; }
+      .feature-card p { font-size: 0.85rem; }
+      .footer-links { gap: 16px; font-size: 0.8rem; }
+      .scroll-top { width: 42px; height: 42px; font-size: 1rem; bottom: 16px; right: 16px; }
+      .faq-item { padding: 1.2rem 0; }
+      .creator-lead { font-size: 1.05rem; }
     }
   </style>
 </head>
