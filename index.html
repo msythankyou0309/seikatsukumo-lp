@@ -3,25 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>政活クラウド｜地方議員のためのDX支援ツール【月2,200円〜】</title>
-  <meta name="description" content="秘書もスタッフもいない地方議員のために。名簿管理・ポスター管理・活動記録をスマホ1台で一元管理。月2,200円（税込）、政務活動費対応。30日間無料トライアル実施中。" />
-  <meta name="keywords" content="地方議員,市議会議員,政務活動費,DX,議員ツール,名簿管理,ポスター管理,政治DX" />
+  <title>政活クラウド｜自治体議員のためのDX支援ツール【月2,200円〜】</title>
+  <meta name="description" content="秘書もスタッフもいない自治体議員のために。名簿管理・ポスター管理・活動記録をスマホ1台で一元管理。月2,200円（税込）、政務活動費対応。30日間無料トライアル実施中。" />
+  <meta name="keywords" content="自治体議員,市議会議員,政務活動費,DX,議員ツール,名簿管理,ポスター管理,政治DX" />
   <meta name="author" content="政活クラウド" />
   <link rel="canonical" href="https://seikatsukumo.jp/" />
 
   <!-- OGP -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://seikatsukumo.jp/" />
-  <meta property="og:title" content="政活クラウド｜地方議員のためのDX支援ツール" />
-  <meta property="og:description" content="秘書もスタッフもいない地方議員のために。名簿・ポスター・活動記録をスマホ1台で一元管理。月2,200円、政務活動費対応。" />
+  <meta property="og:title" content="政活クラウド｜自治体議員のためのDX支援ツール" />
+  <meta property="og:description" content="秘書もスタッフもいない自治体議員のために。名簿・ポスター・活動記録をスマホ1台で一元管理。月2,200円、政務活動費対応。" />
   <meta property="og:image" content="https://seikatsukumo.jp/ogp.png" />
   <meta property="og:locale" content="ja_JP" />
   <meta property="og:site_name" content="政活クラウド" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="政活クラウド｜地方議員のためのDX支援ツール" />
-  <meta name="twitter:description" content="秘書もスタッフもいない地方議員のために。名簿・ポスター・活動記録をスマホ1台で一元管理。月2,200円、政務活動費対応。" />
+  <meta name="twitter:title" content="政活クラウド｜自治体議員のためのDX支援ツール" />
+  <meta name="twitter:description" content="秘書もスタッフもいない自治体議員のために。名簿・ポスター・活動記録をスマホ1台で一元管理。月2,200円、政務活動費対応。" />
   <meta name="twitter:image" content="https://seikatsukumo.jp/ogp.png" />
 
   <!-- Favicon -->
@@ -400,6 +400,110 @@
       font-weight: 700;
     }
 
+    /* ===== Number Banner ===== */
+    .number-banner {
+      background: #f0f9ff;
+      color: #fff;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+    .number-banner .num {
+      font-size: 3.5rem;
+      font-weight: 900;
+      line-height: 1.2;
+      color: #1e3a5f;
+    }
+    .number-banner .num span {
+      color: #2563eb;
+    }
+    .number-banner .num-sub {
+      font-size: 1rem;
+      color: #64748b;
+      margin-top: 0.5rem;
+    }
+
+    /* ===== Testimonials ===== */
+    .testimonials {
+      background: #f8fafc;
+    }
+    .testimonial-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .testimonial-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 2px 12px rgba(0,0,0,.06);
+    }
+    .testimonial-card blockquote {
+      font-size: 0.95rem;
+      color: #475569;
+      line-height: 1.9;
+      margin-bottom: 1.2rem;
+      font-style: italic;
+    }
+    .testimonial-card cite {
+      font-size: 0.85rem;
+      color: #1e3a5f;
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    /* ===== Urgency Banner ===== */
+    .urgency {
+      background: linear-gradient(135deg, #1e3a5f, #2563eb);
+      color: #fff;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+    .urgency-title {
+      font-size: 1.5rem;
+      font-weight: 900;
+      margin-bottom: 0.5rem;
+    }
+    .urgency-sub {
+      font-size: 1rem;
+      color: #bfdbfe;
+      margin-bottom: 1.5rem;
+    }
+
+    /* ===== FAQ ===== */
+    .faq {
+      background: #fff;
+    }
+    .faq-list {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .faq-item {
+      border-bottom: 1px solid #e2e8f0;
+      padding: 1.5rem 0;
+    }
+    .faq-q {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #1e3a5f;
+      margin-bottom: 0.6rem;
+    }
+    .faq-q::before {
+      content: 'Q. ';
+      color: #2563eb;
+    }
+    .faq-a {
+      font-size: 0.93rem;
+      color: #475569;
+      line-height: 1.8;
+    }
+    .faq-a::before {
+      content: 'A. ';
+      color: #2563eb;
+      font-weight: 700;
+    }
+
     /* ===== Creator section ===== */
     .creator {
       background: #fff;
@@ -429,8 +533,9 @@
       margin-top: 2rem;
     }
 
-    /* ===== Contact section ===== */
-    .contact { background: #f8fafc; }
+    /* ===== CTA Final section ===== */
+    .cta-final { background: #1e3a5f; color: #fff; }
+    .cta-final .section-title { color: #fff; }
 
     .contact-form {
       max-width: 560px;
@@ -615,7 +720,7 @@
   <!-- Hero -->
   <section class="hero">
     <div class="hero-inner">
-      <h1>地方議員こそ、DXが必要だ。</h1>
+      <h1>自治体議員こそ、DXが必要だ。</h1>
       <p class="sub">秘書もスタッフもいない。でも、やることは山ほどある。</p>
       <div class="cta-wrap">
         <a href="/register" class="btn-primary">30日間無料で試す →</a>
@@ -654,22 +759,14 @@
   <section class="section solution">
     <div class="section-inner">
       <h2 class="section-title fade-up">政活クラウドが解決します</h2>
-      <p class="solution-desc fade-up">月2,200円（税込）のクラウドシステムで、スマホ1台から名簿・ポスター・活動記録を一元管理。政務活動費にも対応しています。</p>
-      <div class="cards-3">
-        <div class="card fade-up delay-1">
-          <span class="card-icon">📱</span>
-          <p class="card-label">スマホ1台で完結</p>
-        </div>
-        <div class="card fade-up delay-2">
-          <span class="card-icon">💴</span>
-          <p class="card-label">月2,200円</p>
-        </div>
-        <div class="card fade-up delay-3">
-          <span class="card-icon">🔒</span>
-          <p class="card-label">安心のセキュリティ</p>
-        </div>
-      </div>
+      <p class="solution-desc fade-up">月2,200円（税込）のクラウドシステムで、スマホ1台から名簿・ポスター・活動記録を一元管理。スマホ・タブレット・PCすべてに対応したレスポンシブ設計です。</p>
     </div>
+  </section>
+
+  <!-- Number Banner -->
+  <section class="number-banner fade-up">
+    <p class="num">月<span>10</span>時間以上の<br>事務作業を削減</p>
+    <p class="num-sub">※βテスト参加議員の平均値</p>
   </section>
 
   <!-- Features -->
@@ -701,10 +798,27 @@
     </div>
   </section>
 
+  <!-- Testimonials -->
+  <section class="section testimonials">
+    <div class="section-inner">
+      <h2 class="section-title fade-up">βテスターの声</h2>
+      <div class="testimonial-cards">
+        <div class="testimonial-card fade-up delay-1">
+          <blockquote>「Excelで管理していた名簿を移行したら、重複チェックだけで半日分の作業がなくなった。もっと早く欲しかった。」</blockquote>
+          <cite>— 都道府県議会議員</cite>
+        </div>
+        <div class="testimonial-card fade-up delay-2">
+          <blockquote>「ポスターの掲示状況をスマホで確認できるのが助かる。現場に行かなくても状態が分かるので、時間の使い方が変わった。」</blockquote>
+          <cite>— 市議会議員</cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Pricing -->
   <section class="section pricing">
     <div class="section-inner">
-      <h2 class="section-title fade-up">地方議員のための価格設定</h2>
+      <h2 class="section-title fade-up">自治体議員のための価格設定</h2>
       <div class="pricing-table-wrap fade-up delay-1">
         <table class="pricing-table">
           <thead>
@@ -722,18 +836,13 @@
             </tr>
             <tr>
               <td>設計対象</td>
-              <td>国政向け設計</td>
-              <td>地方議員向け設計</td>
+              <td>国政・自治体議員向け</td>
+              <td>自治体議員向け設計</td>
             </tr>
             <tr>
               <td>操作性</td>
               <td>複雑・学習コスト高</td>
               <td>シンプル・即使える</td>
-            </tr>
-            <tr>
-              <td>政務活動費</td>
-              <td>一部対応</td>
-              <td>完全対応</td>
             </tr>
           </tbody>
         </table>
@@ -761,47 +870,47 @@
     <div class="section-inner">
       <h2 class="section-title fade-up">制作者の思い</h2>
       <div class="creator-content fade-up delay-1">
-        <p class="creator-lead">地方議員にこそ、<br>政治DXが必要だと思っている。</p>
+        <p class="creator-lead">自治体議員にこそ、<br>政治DXが必要だと思っている。</p>
         <div class="creator-body">
           <p>市区町村議員の多くは、秘書もスタッフもいない。限られた議員報酬と政務活動費の中で、名簿管理からポスターの確認まで、すべてを一人でこなしている。</p>
           <p>本来、その時間は住民の声を聞くために、政策や制度を研究するために使われるべきだ。Excelを開いて手作業でデータを整理している暇があるなら、もっと大切なことに集中できるはずだった。</p>
-          <p>このサービスは、議員秘書として現場を見てきた経験から生まれた。「あったらいいな」を、安価で、シンプルに。地方議員のための最低限のセットを、地道に作り続けている。</p>
+          <p>このサービスは、議員秘書として現場を見てきた経験から生まれた。「あったらいいな」を、安価で、シンプルに。自治体議員のための最低限のセットを、地道に作り続けている。</p>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section class="section contact" id="contact">
+  <!-- FAQ -->
+  <section class="section faq">
     <div class="section-inner">
-      <h2 class="section-title fade-up">お問い合わせ</h2>
-      <form class="contact-form fade-up delay-1" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <div class="form-group">
-          <label>お名前<span class="req">*必須</span></label>
-          <input type="text" name="name" required placeholder="例：山田 太郎">
+      <h2 class="section-title fade-up">よくある質問</h2>
+      <div class="faq-list">
+        <div class="faq-item fade-up delay-1">
+          <p class="faq-q">解約はいつでもできますか？</p>
+          <p class="faq-a">はい、いつでも解約可能です。契約期間の縛りはありません。管理画面からワンクリックで手続きできます。</p>
         </div>
-        <div class="form-group">
-          <label>メールアドレス<span class="req">*必須</span></label>
-          <input type="email" name="email" required placeholder="例：taro@example.com">
+        <div class="faq-item fade-up delay-2">
+          <p class="faq-q">解約後、データはどうなりますか？</p>
+          <p class="faq-a">解約後30日間はデータを保持します。その間にCSVエクスポートでデータをダウンロードいただけます。</p>
         </div>
-        <div class="form-group">
-          <label>議員種別</label>
-          <select name="type">
-            <option value="">選択してください</option>
-            <option value="市議会議員">市議会議員</option>
-            <option value="町議会議員">町議会議員</option>
-            <option value="村議会議員">村議会議員</option>
-            <option value="その他">その他</option>
-          </select>
+        <div class="faq-item fade-up delay-3">
+          <p class="faq-q">既存のExcelデータを移行できますか？</p>
+          <p class="faq-a">はい、CSVインポート機能で既存の名簿データを一括取り込みできます。</p>
         </div>
-        <div class="form-group">
-          <label>お問い合わせ内容<span class="req">*必須</span></label>
-          <textarea name="message" required placeholder="お気軽にお問い合わせください"></textarea>
-        </div>
-        <button type="submit" class="btn-submit">送信する</button>
-        <div class="form-success" id="formSuccess">お問い合わせありがとうございます。2営業日以内にご返信いたします。</div>
-      </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Final -->
+  <section class="section cta-final" id="signup">
+    <div class="section-inner" style="text-align:center;">
+      <h2 class="section-title fade-up">まずは無料で始めてみませんか？</h2>
+      <p class="fade-up delay-1" style="color:#94a3b8; margin-bottom:2rem;">30日間すべての機能を無料でお試しいただけます。</p>
+      <div class="fade-up delay-2">
+        <a href="/register" class="btn-primary">30日間無料で申し込む →</a>
+        <p class="note" style="margin-top:1rem; color:#94a3b8; font-size:0.85rem;">クレジットカード不要・いつでも解約可能</p>
+      </div>
     </div>
   </section>
 
@@ -811,7 +920,7 @@
     <ul class="footer-links">
       <li><a href="/terms">利用規約</a></li>
       <li><a href="/privacy">プライバシーポリシー</a></li>
-      <li><a href="#contact">お問い合わせ</a></li>
+      <li><a href="#signup">無料で申し込む</a></li>
     </ul>
     <p>&copy; 2026 政活クラウド</p>
   </footer>
@@ -847,30 +956,6 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    // Form submission with Formspree
-    const form = document.getElementById('contactForm');
-    const formSuccess = document.getElementById('formSuccess');
-
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const data = new FormData(form);
-
-      try {
-        const res = await fetch(form.action, {
-          method: 'POST',
-          body: data,
-          headers: { 'Accept': 'application/json' }
-        });
-
-        if (res.ok) {
-          form.reset();
-          formSuccess.classList.add('show');
-          setTimeout(() => formSuccess.classList.remove('show'), 5000);
-        }
-      } catch (err) {
-        // Silently handle error
-      }
-    });
   </script>
 
 <script type="application/ld+json">
@@ -879,7 +964,7 @@
   "@type": "SoftwareApplication",
   "name": "政活クラウド",
   "url": "https://seikatsukumo.jp/",
-  "description": "地方議員向けの政務支援クラウドサービス。名簿管理・ポスター管理・活動記録をスマホ1台で一元管理。",
+  "description": "自治体議員向けの政務支援クラウドサービス。名簿管理・ポスター管理・活動記録をスマホ1台で一元管理。",
   "applicationCategory": "BusinessApplication",
   "operatingSystem": "Web, iOS, Android",
   "offers": {
